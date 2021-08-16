@@ -5,16 +5,16 @@ import styles from "./button.module.css";
 
 import "./App.css";
 
-function App() {
+const Button: React.FC<any> = (props) => <button className={styles.button} {...props}></button>;
+
+const App: React.FC = () => {
   const [completed, setCompleted] = useState(0);
 
   const onComplete = () => {
     setCompleted((completed) => completed + 1);
   };
-
-  const timer = useTimer({ length: 10 * 1000 * 60, onComplete });
-
-  const Button: React.FC<any> = (props) => <button className={styles.button} {...props}></button>;
+  const length = 1000 * 60 * 10;
+  const timer = useTimer({ length, onComplete });
   return (
     <div className="App">
       <header className="App-header">
@@ -31,6 +31,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
