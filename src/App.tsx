@@ -6,6 +6,7 @@ import styles from "./button.module.css";
 import "./App.css";
 
 const Button: React.FC<any> = (props) => <button className={styles.button} {...props}></button>;
+const length = 1000 * 60 * 10;
 
 const App: React.FC = () => {
   const [completed, setCompleted] = useState(0);
@@ -13,7 +14,6 @@ const App: React.FC = () => {
   const onComplete = () => {
     setCompleted((completed) => completed + 1);
   };
-  const length = 1000 * 60 * 10;
   const timer = useTimer({ length, onComplete });
   return (
     <div className="App">
