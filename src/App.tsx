@@ -14,7 +14,9 @@ const App: React.FC = () => {
   const onComplete = () => {
     setCompleted((completed) => completed + 1);
   };
+
   const timer = useTimer({ length, onComplete });
+
   return (
     <div className="App">
       <header className="App-header">
