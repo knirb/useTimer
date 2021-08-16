@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import useTimer from "./useTimer";
-
-import styles from "./button.module.css";
-
 import "./App.css";
+import styles from "./button.module.css";
+import useTimer from "./useTimer";
 
 const Button: React.FC<any> = (props) => <button className={styles.button} {...props}></button>;
 const length = 1000 * 60 * 10;
